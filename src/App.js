@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<HomePage/>}  />
         <Route exact path="/contact" element={<ContactPage/>}  />
-        <Route path="*"  element={<NotFoundPage/>}/>
+        <Route path="*"  element={<HomePage/>}/>
       </Routes>
     </Router>
   );
