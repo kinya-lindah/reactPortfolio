@@ -98,7 +98,7 @@ export default function Contact() {
               <Error>{errors.message?.message}</Error>
             </ContactItemWrapperMessage>
             <ButtonsWrapper>
-              <ButtonPageLink to="/">
+              <ButtonPageLink to="/reactPortfolio">
                 {" "}
                 <Buttons className="highlighted-button">Cancel</Buttons>
               </ButtonPageLink>
