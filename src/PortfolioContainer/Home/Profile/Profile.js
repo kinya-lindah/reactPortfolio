@@ -95,7 +95,7 @@ export default function Profile() {
                 </ButtonPageLink>
 
                 <a
-                  href="reactPortfolio/09-20_21 Resume .pdf"
+                  href="09-20_21 Resume .pdf"
                   // download="Lindah Kinya.pdf"
                   onMouseEnter={onHoverD}
                   onMouseLeave={onHoverD}
