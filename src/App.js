@@ -21,9 +21,9 @@ function App() {
       <NavBar toggle={toggle}  />
       <SideBar isOpen={isOpen} toggle={toggle} />
       <Routes>
-        <Route exact path="/" element={<HomePage/>}  />
-        <Route exact path="/contact" element={<ContactPage/>}  />
-        <Route path="*"  element={<NotFoundPage/>}/>
+        <Route exact path="/reactPortfolio/" element={<HomePage/>}  />
+        <Route exact path="/reactPortfolio/contact" element={<ContactPage/>}  />
+        <Route path="/reactPortfolio/*"  element={<NotFoundPage/>}/>
       </Routes>
     </Router>
   );
