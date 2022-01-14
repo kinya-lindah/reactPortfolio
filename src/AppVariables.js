@@ -1,0 +1,12 @@
+export const color1= 'rgba(216, 151, 212, 1)';
+export const color2= 'rgba(32, 35, 184, 0.8)';
+export const lightcolor1 ='rgba(216, 151, 212, 0.4)';
+export const color3= 'rgb(245, 185, 12, 0.7)';
+export const color4= 'rgba(54, 68, 81, 1)';
+export const  grey='rgb(39, 22, 38)';
+export const texturedGrey= 'rgb(74,88,100)';
+export const white= 'rgb(255, 250, 250)';
+export const colorBackground= 'rgba(255, 255, 255, 255)';
+export const cancel='rgb(211, 56, 56)';
+export const black = '#111';
+export const boxShadow= '0.25em 0.25em 0.75em rgb(74,88,100, 0.5)';
