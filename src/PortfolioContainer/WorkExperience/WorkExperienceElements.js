@@ -57,6 +57,7 @@ export const WEItem1 = styled.button`
   background: none;
   background: ${({ isActive }) => (isActive ? lightcolor1 : `none`)};
   border-left:  ${({ isActive }) => (isActive ? `2px solid ${color2}` : `1px solid ${color2}`)};
+  color:#111;
   border-radius: 0px;
   border-top-right-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
