@@ -4,10 +4,10 @@
 
 .thumbnails {max-width: 300px !important}
 
-.SRLCaptionContainer,.SLRCaptionContainer {padding:10px 0 !important}
-
-.SRLThumbnailsContainer{gap:10px; padding-bottom:15px}
-.SRLThumb{background-size: contain;}
+.SRLCaptionContainer,.SLRCaptionContainer {padding:4px 0 !important}
+.SRLCaptionText {line-height: 5px !important;}
+.SRLThumbnailsContainer{grid-gap:4px !important; padding-bottom:4px !important}
+.SRLThumb{background-size: contain !important;}
 .SRLElementContainer {height: calc(100vh - 185px) !important;}
 .fullOpacity{opacity: 1 !important}
 
