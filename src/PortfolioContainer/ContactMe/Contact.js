@@ -38,7 +38,7 @@ export default function Contact() {
         form.current,
         "user_wQneKgh9g8JJrZ7fdg0MI"
       )
-      .then(history("/"));
+      .then(history("/reactPortfolio"));
     alert("Your email has been sent");
   };
   return (
