@@ -33,10 +33,10 @@ export default function Contact() {
   const sendEmail = () => {
     emailjs
       .sendForm(
-        "service_arr827a",
-        "template_5d0k09j",
+        process.env.service,
+        process.env.template,
         form.current,
-        "user_wQneKgh9g8JJrZ7fdg0MI"
+        process.env.user
       )
       .then(history("/reactPortfolio"));
     alert("Your email has been sent");
