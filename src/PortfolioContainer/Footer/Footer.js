@@ -68,15 +68,15 @@ export default function FooterElements() {
         <div className="cols centered">
           <div className="cols-icon sisters">
             <ButtonPageLink to="/contact">
-              <i class="bi bi-envelope-plus-fill"></i>
+              <i className="bi bi-envelope-plus-fill"></i>
             </ButtonPageLink>
-            <a href="https://www.linkedin.com/in/lindah-muturi/" without rel="noopener noreferrer" target="_blank">
-              <i class="bi bi-linkedin"></i>
+            <a href="https://www.linkedin.com/in/lindah-muturi/" rel="noopener noreferrer" target="_blank">
+              <i className="bi bi-linkedin"></i>
             </a>
-            <a href="https://github.com/kinya-lindah" without
+            <a href="https://github.com/kinya-lindah" 
                   rel="noopener noreferrer"
                   target="_blank">
-              <i class="bi bi-github"></i>
+              <i className="bi bi-github"></i>
             </a>
             
           </div>

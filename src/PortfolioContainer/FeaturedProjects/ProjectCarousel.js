@@ -1,86 +1,24 @@
 import React from "react";
-import { SRLWrapper } from "simple-react-lightbox";
-import { FlexWrapper, Img, ImgNone } from "./ProjectCarouselElements";
+// import { SRLWrapper } from "simple-react-lightbox";
+import { FlexWrapper, Img } from "./ProjectCarouselElements";
 import "./ProjectCarousel.css";
 
-export default function ProjectCarousel({
-  picture1,
-  picture2,
-  picture3,
-  picture4,
-  picture5,
-  alt1,
-  alt2,
-  alt3,
-  alt4,
-  alt5,
-}) {
+export default function ProjectCarousel(props) {
   return (
     <>
-      {alt1.length>0 &&<SRLWrapper>
+      {/* {alt.length>0 &&
         <FlexWrapper>
-          <div>
-            <a href={picture1} class="fullOpacity" data-attribute="SRL">
+ 
+            <a href={picture} >
               <Img
-           
-                src={picture1}
-                alt={alt1}
+                src={picture}
+                alt={alt}
                 className="thumbnails"
-                
               />
             </a>
-          </div>
-          <div>
-            <a href={picture2} class="fullOpacity" data-attribute="SRL">
-              <ImgNone
-                src={picture2}
-                alt={alt2}
-                className="thumbnails"
-                
-              />
-            </a>
-          </div>
-          <div>
-            <a href={picture3} class="fullOpacity" data-attribute="SRL">
-              <ImgNone
-                src={picture3}
-                alt={alt3}
-                className="thumbnails"
-     
-              />
-            </a>
-          </div>
-         
-          {alt4.length > 0 && (
-            <div>
-              <a href={picture4} class="fullOpacity" data-attribute="SRL">
-                <ImgNone
-                  src={picture4}
-                  alt={alt4}
-                  className="thumbnails"
-                  
-                />
-              </a>
-            </div>
-          )}
-        
-
-         {alt5.length > 0 && (
-            <div>
-              <a href={picture5} class="fullOpacity" data-attribute="SRL">
-                <ImgNone
-                  src={picture5}
-                  alt={alt5}
-                  className="thumbnails"
-                  
-                />
-              </a>
-            </div>
-          )}
-
 
         </FlexWrapper>
-      </SRLWrapper>}
+        } */}
     </>
   );
 }

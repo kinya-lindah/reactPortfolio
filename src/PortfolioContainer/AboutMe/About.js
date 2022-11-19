@@ -10,7 +10,7 @@ export default function About() {
 
       <AboutContainer id='about'>
       
-      <div class="centered"><h5 >About</h5></div>
+      <div className="centered"><h5 >About</h5></div>
         <AboutWrapper>
           <AboutImageWrapper>
               <AboutImage src={seriousImage}>

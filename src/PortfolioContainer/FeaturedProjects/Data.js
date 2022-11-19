@@ -1,6 +1,4 @@
-
-
-export const homeObject1 = {
+const homeObject1 = {
     id:"project1",
     lightBg: true,
     topLine: 'backend, frontend, ui/ux',
@@ -25,7 +23,7 @@ export const homeObject1 = {
 
 };
 
-export const homeObject2 = {
+const homeObject2 = {
     id:"project2",
     lightBg: false,
     topLine: 'frontend, ui/ux',
@@ -53,7 +51,7 @@ export const homeObject2 = {
     
 };
 
-export const homeObject3 = {
+const homeObject3 = {
     id:"project3",
     lightBg: true,
     topLine: '',
@@ -75,4 +73,6 @@ export const homeObject3 = {
     alt5:"", 
     
 };
+
+export const allProjectsData = [homeObject1, homeObject2]
 

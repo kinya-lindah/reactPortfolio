@@ -42,11 +42,11 @@ export default function Profile() {
             <div className="profile-details">
               <div className="cols centered">
                 <div className="cols-icon sisters">
-                  <a href="https://www.linkedin.com/in/lindah-muturi/" without rel="noopener noreferrer" target={`_blank`}>
-                    <i class="bi bi-linkedin"></i>
+                  <a href="https://www.linkedin.com/in/lindah-muturi/" rel="noopener noreferrer" target={`_blank`}>
+                    <i className="bi bi-linkedin"></i>
                   </a>
-                  <a href="https://github.com/kinya-lindah"  without rel="noopener noreferrer" target={`_blank`}>
-                    <i class="bi bi-github"></i>
+                  <a href="https://github.com/kinya-lindah"   rel="noopener noreferrer" target={`_blank`}>
+                    <i className="bi bi-github"></i>
                   </a>
                   
                 </div>
@@ -99,7 +99,6 @@ export default function Profile() {
                   onMouseEnter={onHoverD}
                   onMouseLeave={onHoverD}
                   className="downloadButton"
-                  without
                   rel="noopener noreferrer"
                   target="_blank"
                 >

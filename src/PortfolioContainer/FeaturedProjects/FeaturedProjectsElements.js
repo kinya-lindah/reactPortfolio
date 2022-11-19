@@ -4,7 +4,7 @@ import {
   colorBackground,
   black,
   color1,
-  color2
+  color2,texturedGrey
   
 } from "../../AppVariables";
 
@@ -112,9 +112,9 @@ opacity: 1 !important;
 `;
 
 export const ImgWrap = styled.div`
-  max-width: 550px;
-  min-width:100px;
-  height: 100%;
+min-width: 280px;
+min-height: 300px;
+max-height: 500px;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -128,4 +128,32 @@ export const Img = styled.img`
   color: ${({ lightBg }) => (lightBg ? colorBackground:black)};
 
   @media screen and (min-width:1280px){margin-left: 10px;}
+`;
+export const ProjectImg = styled.img`
+min-width: 280px;
+width:25%;
+max-width:350px;
+min-height: 300px;
+max-height: 500px;
+cursor: pointer; 
+border: 2px solid ${texturedGrey};
+border-radius: 10px;
+&:hover {transform: scale(1.05);
+opacity: 1 !important;}
+
+&:hover{animation: shake 0.5s;
+    animation-iteration-count: 1;}
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        // 10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        // 30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        // 50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        // 70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        // 90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); };
+
 `;
