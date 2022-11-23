@@ -11,20 +11,22 @@ export default function Pages() {
   const [openModal, setOpenModal] = useState(false)
   console.log('openModal', openModal)
   return (
-    < div >
+    < div  style={{  filter: openModal===true ? 'brightness(20%)':'brightness(1)', opacity: openModal===true ? 0.5:1}}
+    // onClick ={()=>setOpenModal(false)}
+    >
         <Animated 
       animationIn="fadeInLeft"
       animationOut="fadeOutLeft"
       isVisible={true}
-      style={{  filter: openModal===true ? 'brightness(15%)':'brightness(1)', opacity: openModal===true ? 0.5:1}}
+      
       
     >
-
-        <Home onClick ={()=>setOpenModal(false)}/>
-        <About onClick ={()=>setOpenModal(false)}/>
-        <Projects openModal ={openModal} setOpenModal={setOpenModal}  onClick ={()=>setOpenModal(false)}/>
-        <WorkExperience onClick ={()=>setOpenModal(false)}/>
-        <Footer onClick ={()=>setOpenModal(false)} />
+{console.log("opnModea", openModal)}
+        <Home/>
+        <About/>
+        <Projects openModal ={openModal} setOpenModal={setOpenModal}  />
+        <WorkExperience/>
+        <Footer/>
         
  
     </Animated>
