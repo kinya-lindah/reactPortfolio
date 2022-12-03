@@ -1,24 +1,25 @@
-import React from "react";
-// import { SRLWrapper } from "simple-react-lightbox";
-import { FlexWrapper, Img } from "./ProjectCarouselElements";
+import React, { useState } from "react";
+
+import { FlexWrapper,  } from "./ProjectCarouselElements";
 import "./ProjectCarousel.css";
+import { Img } from "./FeaturedProjectsElements";
 
 export default function ProjectCarousel(props) {
+  const [ activeImage, setActiveImage] = useState([])
   return (
-    <>
-      {/* {alt.length>0 &&
+   
         <FlexWrapper>
- 
-            <a href={picture} >
-              <Img
-                src={picture}
-                alt={alt}
-                className="thumbnails"
-              />
-            </a>
+ {console.log("projects", props)}
+          {/* <div><Img src={props.picture[0][0]} alt={props.picture[0][1]}/> </div> */}
+            <div>
+             { props.pictures.map((pictures,i)=>{
+
+                <div key={i} style={{background:"white"}}>  {console.log('pictures[1]', pictures)} cats  <Img src={pictures[0]} alt={pictures[1]}/> </div>
+              })}
+           </div>
+
 
         </FlexWrapper>
-        } */}
-    </>
+      
   );
 }

@@ -17,12 +17,9 @@ import {
 } from "./FeaturedProjectsElements";
 import "./ProjectCarousel.css";
 import CurlyLine from "../Home/CurlyLine/CurlyLine";
-import ProjectCarousel from "./ProjectCarousel";
-// import SimpleReactLightbox from "simple-react-lightbox";
 import {  color1, color2 } from "../../AppVariables";
 
 export default function FeaturedProjects(props){
-
   return (
     <>
       <ProjectsCOntainer lightBg={props.project.lightBg} id={props.project.id}>
@@ -60,7 +57,7 @@ export default function FeaturedProjects(props){
               </TextWrapper>
             </Column1>
             <Column2>
-              <ProjectImg src={props.project.picture1} alt={props.project.alt1} onClick={()=>{props.setOpenModal(true)}}/>
+              <ProjectImg src={props.project.picture1} alt={props.project.alt1} onClick={()=>{props.setOpenModal(true); props.setClickedProject(props.project)} } />
               <ButtonWrap>
                 <Information lightBg={props.project.lightBg}>
                   {" "}
