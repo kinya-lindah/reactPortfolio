@@ -10,3 +10,4 @@ export const colorBackground= 'rgba(255, 255, 255, 255)';
 export const cancel='rgb(211, 56, 56)';
 export const black = '#111';
 export const boxShadow= '0.25em 0.25em 0.75em rgb(74,88,100, 0.5)';
+export const seeThroughGrey = 'rgba(30, 30, 30, 0.9)'
