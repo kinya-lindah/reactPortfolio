@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { RiMailAddLine, RiMailAddFill } from "react-icons/ri";
 import { Link as LinkRouter } from "react-router-dom";
 import { FaEye, FaRegEye } from "react-icons/fa";
-
+// import "../../../../public/"
 const Eye = styled(FaRegEye)`
   margin-left: 8px;
   font-size: x-large;
@@ -92,12 +92,11 @@ export default function Profile() {
                     </span>
                   </button>
                 </ButtonPageLink>
-
                 <a
-                  href="09-20_21 Resume .pdf"
-                  // download="Lindah Kinya.pdf"
-                  onMouseEnter={onHoverD}
-                  onMouseLeave={onHoverD}
+                  href="/09-20_21 Resume .pdf"
+                  download="Lindah_Muturi_Resume.pdf"
+                  // onMouseEnter={onHoverD}
+                  // onMouseLeave={onHoverD}
                   className="downloadButton"
                   rel="noopener noreferrer"
                   target="_blank"

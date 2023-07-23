@@ -18,6 +18,7 @@ import {
 import "./ProjectCarousel.css";
 import CurlyLine from "../Home/CurlyLine/CurlyLine";
 import {  color1, color2 } from "../../AppVariables";
+// import ''
 
 export default function FeaturedProjects(props){
   return (
@@ -56,8 +57,8 @@ export default function FeaturedProjects(props){
                 <Information lightBg={props.project.lightBg}> {props.project.description} </Information>
               </TextWrapper>
             </Column1>
-            <Column2>
-              <ProjectImg src={props.project.picture1} alt={props.project.alt1} onClick={()=>{props.setOpenModal(true); props.setClickedProject(props.project)} } />
+            <Column2>{console.log("featured projects", props.project.picture1)}
+              <ProjectImg  src={require("../../items/Home/"+props.project.picture1 )} alt={props.project.alt1} onClick={()=>{props.setOpenModal(true); props.setClickedProject(props.project)} } />
               <ButtonWrap>
                 <Information lightBg={props.project.lightBg}>
                   {" "}

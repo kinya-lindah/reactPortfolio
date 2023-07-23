@@ -12,4 +12,4 @@
   --box-shadow: 0.25em 0.25em 0.75em var(--color1), 0.125em 0.125em 0.25em var(--color2);
 }
 #root{ width: 100%;}
-.MuiDialog-container , .MuiDialog-paper{background-color: rgba(30, 30, 30, 0.9) !important;}
+.MuiDialog-container , .MuiDialog-paper{background-color: rgba(10,10,10,0.7) !important;}
