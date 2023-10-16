@@ -24,7 +24,8 @@ export const WEWrapper = styled.div`
   border-radius: 10px;
   margin: auto;
   max-width: 760px;
-  background: ${colorBackground}
+  background: ${colorBackground};
+  height: 305px
 `;
 export const WECols = styled.div``;
 export const WETitle = styled.h5`
@@ -50,6 +51,8 @@ export const WENav = styled.nav`
   align-items: flex-end;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 10px;
+  width: 150px
 `;
 export const WEItem1 = styled.button`
   width: 17ch;

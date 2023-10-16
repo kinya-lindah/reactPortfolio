@@ -12,7 +12,6 @@ import {
   Information,
   ButtonWrap,
   Column2,
-  ImgWrap,
   ProjectImg,
 } from "./FeaturedProjectsElements";
 import "./ProjectCarousel.css";

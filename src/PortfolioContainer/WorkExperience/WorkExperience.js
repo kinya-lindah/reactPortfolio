@@ -4,63 +4,45 @@ import { WEContainer, WEWrapper,WECols, WETitle, WENavWrapper, WENav, WEItem1, W
 
 export default function WorkExperience() {
 const projectsEven = true;
-const [isActive, setIsActive]= useState({
-    crm:true,
-    tech:false,
-    ra:false,
-});
-const [workDescription, setWorkDescription] = useState ({
+const [isActive, setIsActive]= useState("cisco");
+const workPlacesOrder =["cisco","crm", "afro", "ra"]
+const workPlaces ={
+"cisco": {
+    officialTitle: "Software Engineer",
+    companyTitle:"Cisco",
+    time:"Jun 2021 - Present",
+    impact1:"Reduced website load times by 300%, as measured by page load speed metrics",
+    impact2:"Implemented comprehensive frontend testing protocols, and wrote documentation on the same",
+    
+}, 
+"crm": {
+    officialTitle: "CRM Administrator",
     companyTitle:"2b1Inc",
     time:"Dec 2020 - Dec 2021",
     impact1:"Increased profits by 100% by identifying unprofitable products",
     impact2:"Taught colleagues, introductory HTML classes, to ensure that they could keep up the company's website ",
     
-});
-
-const crmAdmin =()=>{
-    setWorkDescription(previousState => {return {...previousState, 
-    companyTitle:"2b1Inc",
-    time:"Dec 2020 - Dec 2021",
-    impact1:"Increased profits by 100% by identifying unprofitable products",
-    impact2:"Taught colleagues, introductory HTML classes, to ensure that they could keep up the company's website ",
-    }} );
-    setIsActive(previousState => {return {...previousState,
-        crm:true,
-        tech:false,
-        ra:false,
-    }});
-
-};
-
-const techLead =()=>{
-    setWorkDescription(previousState => {return {...previousState, 
+}, 
+"afro":{
+    officialTitle: "Technical Lead",
     companyTitle:"AfroFem Coders",
-    time:"May 2021 - Sept 2021",
+    time:"May 2021 - Dec 2022",
     impact1:"Created final project and assisted 25+ students in working throught the project",
     impact2:"Led discussions for the 25+ person bootcamp to teach Python Fundamentals and Introduction to Data Analytics ",
-    }} ) ;
-    setIsActive(previousState => {return {...previousState,
-        crm:false,
-        tech:true,
-        ra:false,
-     }} );
+},
 
-};
-
-const researchAssistant =()=>{
-    setWorkDescription(previousState => {return {...previousState, 
+"ra":{
+    officialTitle: "Research Assistant",
     companyTitle:"Center on the Politics of Development",
     time:"Aug 2019 - Aug 2020",
     impact1:"Used Excel to automate data mining processes from web scrapped databases",
     impact2:"Analyzed the role of social media in fuelling post-election violence in Sierra Leone. ",
-    }} );
-    setIsActive(previousState => {return {...previousState,
-        crm:false,
-        tech:false,
-        ra:true,
-     }})
-};
 
+}}
+const changeActive=(key)=>{
+    // setWorkDescription(workPlaces[key])
+    setIsActive(key)
+}
     return (
         <WEContainer id="workEperience" projectsEven={projectsEven}>
             
@@ -70,26 +52,21 @@ const researchAssistant =()=>{
                 <WENavWrapper>
                     
                     <WENav>
-                        <WEItem1  onClick={crmAdmin}  isActive={isActive.crm}>
-                            CRM Administrator 
-                        </WEItem1>
-                        <WEItem1  onClick={techLead} isActive={isActive.tech}>
-                          Technical Lead 
-                        </WEItem1>
-                        <WEItem1   onClick={researchAssistant}  isActive={isActive.ra}>
-                           Research Assistant 
-                        </WEItem1>
+                        {workPlacesOrder.map((place, i)=> <WEItem1  onClick={()=>changeActive(place)}  isActive={isActive===place} key={i}>
+                            {workPlaces[place]?.officialTitle}
+                        </WEItem1> )}
+                        
                     </WENav> 
 
                     <WEItem1Description >
-                        <WECompanyTitle>{workDescription.companyTitle}</WECompanyTitle>
-                        <Time>{workDescription.time}</Time>
+                        <WECompanyTitle>{workPlaces[isActive].companyTitle}</WECompanyTitle>
+                        <Time>{workPlaces[isActive].time}</Time>
                         <WEItemList>
                             <WELi>
-                            {workDescription.impact1}
+                            {workPlaces[isActive].impact1}
                             </WELi>
                             <WELi>
-                            {workDescription.impact2}
+                            {workPlaces[isActive].impact2}
                             </WELi>
                         </WEItemList>
                     
