@@ -13,6 +13,9 @@ import {
 export const WEContainer = styled.div`
   background: ${({projectsEven})=>(projectsEven? black: colorBackground)};
   padding: 25px;
+  @media screen and (max-width: 700px) {
+    margin-bottom:40px;
+  }
 `;
 export const WEWrapper = styled.div`
   display: flex;
@@ -25,11 +28,16 @@ export const WEWrapper = styled.div`
   margin: auto;
   max-width: 760px;
   background: ${colorBackground};
-  height: 305px
+  height: 305px;
+  overflow:scroll;
+  @media screen and (max-width: 700px) {
+    height:fit-content;
+  }
 `;
 export const WECols = styled.div``;
 export const WETitle = styled.h5`
   text-align: center;
+  margin-bottom:10px;
   &:after {
     content: "";
     display: block;
@@ -42,8 +50,12 @@ export const WETitle = styled.h5`
 `;
 export const WENavWrapper = styled.div`
   padding: 10px;
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 700px) {
+    flex-direction:column;
+    padding:0
+  }
 `;
 export const WENav = styled.nav`
   display: flex;
@@ -52,10 +64,18 @@ export const WENav = styled.nav`
   flex-wrap: wrap;
   flex-direction: column;
   gap: 10px;
-  width: 150px
+  width: 160px;
+  @media screen and (max-width: 700px) {
+    flex-direction:row;
+    width: calc(100vw - 50px);
+    flex-wrap:nowrap;
+    overflow: scroll;
+    gap:2px;
+    justify-content:flex-start
+  }
 `;
 export const WEItem1 = styled.button`
-  width: 17ch;
+  width: 18ch;
   border-style: none;
   background: none;
   background: ${({ isActive }) => (isActive ? lightcolor1 : `none`)};
@@ -72,11 +92,18 @@ export const WEItem1 = styled.button`
     border: ${color1};
     border-left: 2px solid ${color2};
   } ;
+  @media screen and (max-width: 700px) {
+    border:0px;
+    border-radius: 10px !important;
+    font-size:11px;
+    margin-bottom:5px;
+    background: lightgrey;
+  }
 `;
 
 export const WEItem1Description = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   transition: all 1s;

@@ -62,7 +62,7 @@ export default function FooterElements() {
     <>
       <FooterContainer>
         <div  style={{display:'flex' ,justifyConent:"flex-end"}}> 
-          <PulseText>Lindah Kinya</PulseText>
+          <PulseText>Lindah Muturi</PulseText>
         </div>
 
         <div className="cols centered">

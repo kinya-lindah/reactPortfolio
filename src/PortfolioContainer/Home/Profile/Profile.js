@@ -56,7 +56,7 @@ export default function Profile() {
                   Hi! I'm
                   <span className="hightlighted-text">
                     {" "}
-                    Lindah Kinya<span role="img" aria-label="Smiley Emoji"></span>😄
+                    Lindah Muturi<span role="img" aria-label="Smiley Emoji"></span>😄
                   </span>
                 </span>
               </div>

@@ -1,4 +1,4 @@
-Lindah Kinya| Software Engineer| Portfolio
+Lindah Muturi| Software Engineer| Portfolio
 
 React website using React-Router, Emailjs API, React.js components, forms, and
 events
