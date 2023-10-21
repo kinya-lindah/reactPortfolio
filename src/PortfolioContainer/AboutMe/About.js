@@ -5,6 +5,7 @@ import { color2 } from "../../AppVariables";
 
 
 export default function About() {
+  const skills = ["HTML", "React", "Python", "Flask", "Git", "Jenkins", "NoSql","SQL"]
   return (
     <>
 
@@ -20,19 +21,13 @@ export default function About() {
           <AboutInfoWrapper1>
             <AboutInfo>
                 
-                Lindah is full Stack Developer and mobile developer with knowlegde in React, Kivy and other frameworks.  
+                Lindah is full Stack Developer with knowlegde in React, Flask and other frameworks.  
               She is a quick learner who is full of curiosity and great at collaborating.
              </AboutInfo>
             <AboutSkills> <h4 className="centered" style={{color: color2}}> Skills and Languages</h4>
               <AboutList>
-                <li> HTML</li>
-                <li>CSS</li>
-                <li>Android dev</li>
-                <li>IOS dev</li>
-                <li>React</li>
-                <li>Python</li>
-                <li>Kivy</li>
-                <li> Github</li>
+               {skills.map((skill, i)=> <li key={i}> {skill}</li>)} 
+                
               </AboutList></AboutSkills>
           </AboutInfoWrapper1>
         </AboutWrapper>
