@@ -71,6 +71,7 @@ export const WENav = styled.nav`
     flex-wrap:nowrap;
     overflow: scroll;
     gap:2px;
+    padding-left:1%;
     justify-content:flex-start
   }
 `;

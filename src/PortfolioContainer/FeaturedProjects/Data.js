@@ -51,28 +51,6 @@ const homeObject2 = {
     
 };
 
-const homeObject3 = {
-    id:"project3",
-    lightBg: true,
-    topLine: '',
-    headline:'',
-    githubLink:"",
-    imgStart: false,
-    image: 'me.png',
-    alt: "",
-    description: "",
-    lightboxid :"me.jpeg",
-    picture1:"serious.jpeg",
-    picture2:"serious.jpeg",
-    picture3:"me.png",
-    picture4:"serious.jpeg",
-    alt1:"",
-    alt2:"",
-    alt3:"",
-    alt4 :"", 
-    alt5:"", 
-    
-};
 
 export const allProjectsData = [homeObject1, homeObject2]
 

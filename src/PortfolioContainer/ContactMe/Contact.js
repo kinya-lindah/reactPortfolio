@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
+import React, { useRef, useState } from "react";
+// import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
 import {
   ContactContainer,
@@ -18,28 +18,42 @@ import {
   ButtonPageLink,
   ContactCancel,
   ContactCanceledWrapper,
-  Error,
 } from "./ContactElements";
 import CodeVideo from "../../items/Home/matrix2.mp4";
-
 export default function Contact() {
   const form = useRef();
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm();
   let history = useNavigate();
+  const [emailInfo, setEmailInfo] = useState({"name": "", "email":"","message":""})
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    sendEmail()
+  }
+
+
+  const handleChange=(e)=>{
+    if (e.target.value){
+      setEmailInfo({...emailInfo, [e.target.name]: e.target.value})
+    }
+    else{ setEmailInfo({...emailInfo, [e.target.name]: ''}) }
+
+  }
   const sendEmail = () => {
-    emailjs
-      .sendForm(
-        process.env.service,
-        process.env.template,
-        form.current,
-        process.env.user
-      )
-      .then(history("/reactPortfolio"));
-    alert("Your email has been sent");
+    var data = {
+      service_id: process.env.REACT_APP_SERVICE_ID,
+      template_id:  process.env.REACT_APP_TEMPLATE_ID,
+      user_id:  process.env.REACT_APP_PUBLIC_KEY,
+      template_params: form.current
+    }
+    emailjs.sendForm(data.service_id, data.template_id, form.current, data.user_id)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+        alert("Your email has been sent");
+        history("/reactPortfolio")
+    }, function(error) {
+       console.log('FAILED...', error);
+       alert("Failed! Please reload page and retry.");
+    });
+
   };
   return (
     <>
@@ -53,18 +67,19 @@ export default function Contact() {
               <ContactCancel>X</ContactCancel>
             </ButtonPageLink>
           </ContactCanceledWrapper>
-          <ContactHeading>Contact Form</ContactHeading>
-          <ContactForm onSubmit={handleSubmit(sendEmail)} ref={form}>
+          <ContactHeading>Contact Me</ContactHeading>
+          <ContactForm onSubmit={handleSubmit} ref={form}>
             <ContactItemWrapper>
               <ContactLabel htmlFor="name">Name</ContactLabel>
               <ContactInput
                 name="name"
                 id="name"
-                {...register("name", {
-                  required: "Required",
-                })}
+                value={emailInfo.name}
+                onChange={e=> handleChange(e)}
+                required
+
               />
-              <Error>{errors.name && errors.name.message}</Error>
+
             </ContactItemWrapper>
             <ContactItemWrapper>
               <ContactLabel htmlFor="email">Email</ContactLabel>
@@ -72,15 +87,11 @@ export default function Contact() {
                 type="email"
                 name="email"
                 id="email"
-                {...register("email", {
-                  required: "Required",
-                  pattern: {
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    message: "Invalid email address",
-                  },
-                })}
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                value={emailInfo.email}
+                onChange={e=> handleChange(e)}
+                required 
               />
-              <Error>{errors.email && errors.email.message}</Error>
             </ContactItemWrapper>
 
             <ContactItemWrapperMessage>
@@ -90,12 +101,11 @@ export default function Contact() {
               <ContactInputText
                 name="message"
                 id="message"
-                {...register("message", {
-                  required: "Required",
-                  minLength: { value: 3, message: "Message too short" },
-                })}
+                pattern=".{3,}"
+                value={emailInfo.message}
+                onChange={e=> handleChange(e)}
+                required
               ></ContactInputText>
-              <Error>{errors.message?.message}</Error>
             </ContactItemWrapperMessage>
             <ButtonsWrapper>
               <ButtonPageLink to="/reactPortfolio">
